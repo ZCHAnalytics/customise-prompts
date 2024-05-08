@@ -14,7 +14,7 @@ $CustomPrompt = {
     $currentDirectory = (Get-Item -Path $pwd).Name
     Microsoft.PowerShell.Utility\Write-Host "$currentDirectory " -NoNewLine -ForegroundColor Green
     # Add any additional customizations here
-    $happyPrompts = @('🍺'; '😀'; '🤜'; '🎉'; '🤟'; '✔'; '👌'; '🌈'; '❤'; '💯'; '🆗'; '🗨'; '🌍'; '🌎'; '🌏'; '🌐'; '🌊'; '🌋'; '🌤'; '⛅'; '🌥'; '🌦'; '🇰🇬'; '🇬🇧'; '☔'; '🇲🇲')
+    $happyPrompts = @('🍺'; '😀'; '🤜'; '🎉'; '🤟'; '✔'; '👌'; '🌈'; '❤'; '💯'; '🆗'; '🗨'; '🌍'; '🌎'; '🌏'; '🌐'; '🌊'; '🌋'; '🌤'; '⛅'; '🌥'; '🌦'; '☔')
     $prompt = $happyPrompts[(Get-Random -min 0 -max ($happyPrompts.Length))]
     Microsoft.PowerShell.Utility\Write-Host "`n$prompt " -NoNewLine -ForegroundColor "DarkGray"
     return " "
