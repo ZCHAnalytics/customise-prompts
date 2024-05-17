@@ -28,6 +28,11 @@ $CustomPrompt = {
 
 `$function:prompt = $function:custom_prompt`
 
+
+## One line code
+$CustomPrompt = { $host.UI.RawUI.WindowTitle = Microsoft.PowerShell.Management\Split-Path $pwd.ProviderPath -Leaf ; $Host.UI.RawUI.ForegroundColor = "White" ; $currentDirectory = (Get-Item -Path $pwd).Name ;     Microsoft.PowerShell.Utility\Write-Host "$currentDirectory " -NoNewLine -ForegroundColor Green ; $happyPrompts = @('🍺'; '😀'; '🤜'; '🎉'; '🤟'; '✔'; '👌'; '🌈'; '❤'; '💯'; '🆗'; '🗨'; '🌍'; '🌎'; '🌏'; '🌐'; '🌊'; '🌋'; '🌤'; '⛅'; '🌥'; '🌦'; '☔') ; $prompt = $happyPrompts[(Get-Random -min 0 -max ($happyPrompts.Length))] ; Microsoft.PowerShell.Utility\Write-Host "`n$prompt " -NoNewLine -ForegroundColor "DarkGray" ; return " " ; } ; Set-Item -Path function:\custom_prompt -Value $CustomPrompt ; $function:prompt = $function:custom_prompt
+
+
 ## Undoing Custom Prompt in PowerShell:
 To revert to the default prompt or remove the custom prompt setup:
 
